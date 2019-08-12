@@ -51,6 +51,7 @@ function allQuestions(){
 		document.getElementById("ques").innerHTML = "Please inform your therapist";
 		// unhide next section button
 		document.getElementById("nextSecButton").hidden="";
+		document.getElementById("submit").hiddent="hidden";
 	}
 }
 
@@ -119,7 +120,7 @@ We will also be exploring any issues you may have encountered and how to address
 <button type="button" id="backButton" onclick="goBack()"> Back
 </button>
  	
-<button type="button" id="submitButton" onclick="nextQues()"> Next
+<button type="button" id="submitButton" onclick="nextQuestion()"> Next
 </button>	
 
 <button type="button" id="nextSecButton" hidden="hidden" onclick="NewSkills.php"> Next Section

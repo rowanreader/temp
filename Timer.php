@@ -16,18 +16,22 @@ if (isset($_POST['submit'])){
 
 <h1> Daily Log </h1>
 
-
 <form method='post'>
 <input type="text" name="log" hidden="hidden"><br><br>
-
-<input type="submit" name="submit" id="submit" value="Start" onclick="change()">
+<input type="Button" name="submit" id="submit" value="Start" onclick="change()">
 </form>
+
 <script>
 function change(){	
-	var x = document.getElementById("submit");
-	if (x.value == "Start"){
-		x.value = "Stop";
-		
+	var x = document.querySelector('#submit');
+	if (x.textContent == "Start"){
+		x.textContent = "Stop";
+	}
+	else if (x.textContent == "Stop"){
+		x.textContent = "Finish Log";
+	}
+	else{ // Finish Log
+		x.textContent = "Start";
 	}
 	
 }
