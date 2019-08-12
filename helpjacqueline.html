@@ -1,0 +1,28 @@
+
+<form method='post'>
+<input type="text" name="log" hidden="hidden"><br><br>
+<button type="Button" id="startstop" onclick="change()">Start </button>
+
+</form>
+
+
+
+<script>
+
+var start = true; 
+function change(){
+	var x = document.querySelector('#startstop')
+	start= !start;
+	console.log(x.textContent);
+	if(start === false){
+		x.textContent = "Stop"
+	}
+	
+	else{
+		x.textContent = "Start";
+	}
+	
+}
+</script>
+</body>
+</html>

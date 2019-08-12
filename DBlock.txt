@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> New Skills </h2>
+
+
+
+<script>
+
+question = 1;
+var prev;
+function goBack(){
+	if (backBtn.length != 1){	
+		prev = backBtn.pop();
+		question = prev;
+	}
+	allQuestions();
+}
+
+
+</script>
+<p id="opening">  </p>
+<p id="ques"> Did you watch Module 2 on using a Calendar and Task-List?  </p>
+	
+<input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Yes</label><br>
+<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label">No</label><br>
+<input type="radio" id="a3" name="answers" value=2><label for="a3" id="a3label" hidden="hidden"></label><br>
+<input type="radio" id="a4" name="answers" value=3><label for="a4" id="a4label" hidden="hidden"></label><br>
+
+</br>
+<button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
+</button>
+ 	
+<button type="button" id="submitButton" onclick="nextQuestion()"> Next
+</button>	
+
+<button type="button" id="AButton" hidden="hidden" onclick="TransitionA.php?backVar=d(backBtn)"> Next Section
+<button type="button" id="BButton" hidden="hidden" onclick="TransitionB.php?backVar=d(backBtn)"> Next Section
+<button type="button" id="DButton" hidden="hidden" onclick="TransitionC.php?backVar=d(backBtn)"> Next Section
+<button type="button" id="CButton" hidden="hidden" onclick="TransitionD.php?backVar=d(backBtn)"> Next Section
+</button>
+
+</body>
+</html>
