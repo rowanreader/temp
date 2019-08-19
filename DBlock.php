@@ -7,7 +7,7 @@
 
 
 <script>
-
+var backBtn = [0,1]; 
 question = 1;
 var prev;
 function goBack(){
@@ -75,81 +75,84 @@ function nextQuestion(){
 		}
 		case 8:{
 			question = 9;
-			if (document.getElementById('a1').checked{
+			if (document.getElementById('a1').checked){
 				document.getElementById('opening').innerHTML = "Implementing significant behaviour change is very challenging at the beginning. </br>It takes weeks before things start to become easier, however, it does work if you stick with it!</br>This program will help you fulfill your true potential by assisting you in organizational and time-management skills.</br>Keep trying and it will become easier when you begin to see positive results in the later sessions "
 			}
 			break;
 		}
 		case 9:{
 			question = 10;
-			if (document.getElementById('a2').checked{
+			if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Consider arranging your schedule in your calendar next week to aim for 7-9 hrs of sleep.</br>We will discuss sleep issues and how to address them in Module 4 in two weeks. ";
 			}		
 			break;
 		}
 	}
-	
 	document.getElementById('a1').checked = true;
 	allQuestions();
+	
 }
 
 function allQuestions(){
 	if (question == 1){
 		document.getElementById('opening').innerHTML = "";
 		document.getElementById('ques').innerHTML = "Did you have issues with 1 or more of the following?";
-		document.getElementById('a1').innerHTML = "Trouble with motivation";
-		document.getElementById('a2').innerHTML = "Trouble remembering to use the system";
+		document.getElementById('a1label').innerHTML = "Trouble with motivation";
+		document.getElementById('a2label').innerHTML = "Trouble remembering to use the system";
+		document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('submitButton').hidden = "";
 	}
 	else if (question == 2){
 		document.getElementById("ques").innerHTML = "Did you attempt to use the Task-List and Calender system?";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";		
-	
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";		
+		document.getElementById('backButton').hidden = "";	
 	}
 	else if (question == 3){
 		document.getElementById("ques").innerHTML = "Did you have trouble remembering to use the Task-List/Calender system?";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";	
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";	
 	
 	}
 	else if (question == 4){		
 		document.getElementById("ques").innerHTML = "Did you find it difficult to start using the system?";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";
 	}
 	
 	else if (question == 5){// terminal, move to next section	
 		document.getElementById('ques').hidden = "hidden";
-		document.getElementById('a1').hidden = "hidden";
-		document.getElementById('a2').hidden = "hidden";
+		document.getElementById('a1label').hidden = "hidden";
+		document.getElementById('a2label').hidden = "hidden";
 		document.getElementById('nextButton').hidden = "";
 	}
 	
 	else if (question == 6){
 		document.getElementById('ques').innerHTML = "Are you struggling with distracting thoughts and/or environment?";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";
 	}
 	else if (question == 7){
 		document.getElementById('ques').innerHTML = "Do you feel uncomfortable with using any aspect of the Calendar/Task-List system?";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";		
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";		
 	}
 	else if (question == 8){
 		document.getElementById('ques').innerHTML = "Do you feel that the system and/or program require more effort than you think it's worth? ";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";		
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";		
 	}
 	else if (question == 9){
 		document.getElementById('ques').innerHTML = "Are you getting adequate sleep? (7-9 hrs)";
-		document.getElementById('a1').innerHTML = "Yes";
-		document.getElementById('a2').innerHTML = "No";	
+		document.getElementById('a1label').innerHTML = "Yes";
+		document.getElementById('a2label').innerHTML = "No";	
 	}
 	else if (question == 10){ // terminal
 		document.getElementById('ques').innerHTML = "Contact your therapist if you feel consistently depressed, anxious, or inexplicably tired. </br> These feelings can have an impact on your motivation, focus, and health.";
-		document.getElementById('a1').hidden = "hidden";
-		document.getElementById('a2').hidden = "hidden";	
-		document.getElementById('nextButton').hidden = "";
+		document.getElementById('a1label').hidden = "hidden";
+		document.getElementById('a2label').hidden = "hidden";	
+		document.getElementById('nextButton').hidden = "";		
+		document.getElementById('submitButton').hidden = "hidden";
 		
 	}
 	

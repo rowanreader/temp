@@ -8,6 +8,7 @@
 
 <script>
 
+var backBtn = [0,1]; 
 question = 1;
 var prev;
 function goBack(){
@@ -76,14 +77,19 @@ function nextQuestion(){
 		}
 		
 	}
+	
+	document.getElementById('a1').checked = true;
+	allQuestions();
 }
 
 function allQuestions(){
 	if (question == 1){
 		document.getElementById('ques').innerHTML = "Did you take 15 minutes (e.g. on a Sunday) to plan the week ahead using your calendar?";
+		document.getElementById('backButton').hidden = "hidden";
 	}
 	else if (question == 2){
 		document.getElementById('ques').innerHTML = "Did you enter all routine items to your calendar? (e.g. Studying, Labs, tutorials, work, extracurricular activities, bed-time)";
+		document.getElementById('backButton').hidden = "";
 	}
 	else if (question == 3){
 		document.getElementById('ques').innerHTML = "Did you enter items from your Daily and Master Task-Lists?";
@@ -102,7 +108,11 @@ function allQuestions(){
 		document.getElementById('ques').hidden = "hidden";
 		document.getElementById('a1').hidden = "hidden";
 		document.getElementById('a2').hidden = "hidden";
+		document.getElementById('a1label').hidden = "hidden";
+		document.getElementById('a2label').hidden = "hidden";
 		document.getElementById('nextButton').hidden = "";
+		document.getElementById('backButton').hidden = "";
+		document.getElementById('submitButton').hidden = "hidden";
 	}
 	else if (question == 6){
 		document.getElementById('ques').innerHTML = "Are you unsure of how much time to assign to each task?";		

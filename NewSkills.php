@@ -7,7 +7,7 @@
 
 
 <script>
-
+var backBtn = [0,1]; // keep track of questions
 question = 1;
 var prev;
 function goBack(){
@@ -59,6 +59,8 @@ function allQuestions(){
 		document.getElementById("a2label").innerHTML = "No";
 		document.getElementById("ques").innerHTML = "Did you encounter any technical issues when trying to access the module? ";
 		document.getElementById("backButton").hidden="hidden";
+		document.getElementById("a3").hidden="hidden";
+		document.getElementById("a4").hidden="hidden";
 	}
 	else if (question == 2){
 		document.getElementById("a1label").innerHTML = "Yes, I used both";
@@ -100,8 +102,8 @@ function allQuestions(){
 	
 <input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Yes</label><br>
 <input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label">No</label><br>
-<input type="radio" id="a3" name="answers" value=2><label for="a3" id="a3label" hidden="hidden"></label><br>
-<input type="radio" id="a4" name="answers" value=3><label for="a4" id="a4label" hidden="hidden"></label><br>
+<input type="radio" id="a3" name="answers" value=2 hidden="hidden"><label for="a3" id="a3label" hidden="hidden"></label><br>
+<input type="radio" id="a4" name="answers" value=3 hidden="hidden"><label for="a4" id="a4label" hidden="hidden"></label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
