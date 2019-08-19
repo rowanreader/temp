@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Daily Log </h1>
+
+<form method='post' action='Timer.php'>
+<input type="text" id="log" hidden="hidden"><br><br>
+<button type="button" id="start" onclick="change()">Start</button>
+
+<button type="button" class="button" id="logBtn" hidden="hidden" onclick="change()">Finish Log</button>
+</form>
+<script src="jquery.js">
+</script>
+
+
+<script>
+var start = 1;
+function change(){	
+	var x = document.querySelector('#start');
+	if (start === 1){
+		x.textContent = "Stop";
+		start = 2;
+		//var temp = new Date();
+		var startTime = new Date();		
+		var newLine = 0;
+		$.post('Timer.php',{variable:startTime, extra:newLine});
+	}
+	else if (start === 2){
+		log = document.getElementById("log");
+		log.hidden="";	
+		document.getElementById("logBtn").hidden = "";
+		document.getElementById("start").hidden = "hidden";	
+		start = 3;		
+		//var temp = new Date();
+		var stopTime = new Date();// temp.toString;
+		var newLine = 0;
+		$.post('Timer.php',{variable:stopTime, extra:newLine});
+	}
+	else if (start == 3){
+		var act = $('#log').val();
+		var newLine = 1;
+		$.post('Timer.php',{variable:act,extra:newLine});
+		window.location.reload();
+	}
+	
+	
+}
+</script>
+</body>
+</html>
