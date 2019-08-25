@@ -2,12 +2,11 @@
 <html>
 <body>
 
-<h2> D Block </h2>
-
+<h2> Section B </h2>
 
 
 <script>
-var backBtn = [0,1]; 
+var backBtn = [0]; // keep track of questions
 question = 1;
 var prev;
 function goBack(){
@@ -87,12 +86,72 @@ function nextQuestion(){
 			}		
 			break;
 		}
+		case 10:{
+			question = 11; // calender questions
+			break;
+		}
+		case 11:{
+			question = 12;
+			if (document.getElementById('a1').checked){
+					document.getElementById('opening').innerHTML = "Good job. To make this easier we will be planning the week ahead after the next couple of questions.";
+			}
+			else if (document.getElementById('a2').checked){
+					document.getElementById('opening').innerHTML = "Okay. You will be able to try this for the coming week, as we will be planning the week ahead after the next couple of questions.";
+			}
+			break;
+		}
+		case 12:{
+			question = 13;
+			if (document.getElementById('a1').checked){
+					document.getElementById('opening').innerHTML = "Good job.";
+			}
+			else if (document.getElementById('a2').checked){
+					document.getElementById('opening').innerHTML = "Okay. You will be able to try this for the coming week, as we will be planning the week ahead after the next couple of questions.";
+			}
+			break;
+		}
+		case 13:{
+			question = 14;
+			if (document.getElementById('a1').checked){
+					document.getElementById('opening').innerHTML = "Good job.";
+			}
+			else if (document.getElementById('a2').checked){
+					document.getElementById('opening').innerHTML = "Okay. You will be able to try this for the coming week, as we will be planning the week ahead after the next couple of questions.";
+			}
+			break;
+		}
+		case 14:{
+			
+			if (document.getElementById('a1').checked){
+					document.getElementById('opening').innerHTML = "Good job.";
+					question = 15;
+			}
+			else if (document.getElementById('a2').checked){
+					document.getElementById('opening').innerHTML = "Okay. You will be able to try this for the coming week, as we will be planning the week ahead after the next couple of questions.";
+					question = 16;
+			}
+			break;
+		}
+		case 15:{
+			break;
+		}
+		case 16:{
+			question = 15;
+			if (document.getElementById('a1').checked){
+					document.getElementById('opening').innerHTML = "Try using the <a target='_blank' href='https://ctl.utsc.utoronto.ca/assignmentcal/'>UofT assignment</a> calculator to help you determine time needed () .";
+					
+			}
+			else if (document.getElementById('a2').checked){
+					document.getElementById('opening').innerHTML = "Please refer to your Summary Sheet for Module 2 and try to do this next week.</br>Please refer to your Summary Sheet for Module 2.";
+			}
+			break;
+		}
 	}
+	
 	document.getElementById('a1').checked = true;
 	allQuestions();
-	
 }
-
+	
 function allQuestions(){
 	if (question == 1){
 		document.getElementById('opening').innerHTML = "";
@@ -124,9 +183,6 @@ function allQuestions(){
 		document.getElementById('ques').hidden = "hidden";
 		document.getElementById('a1label').hidden = "hidden";
 		document.getElementById('a2label').hidden = "hidden";
-		
-		document.getElementById('a1').hidden = "hidden";
-		document.getElementById('a2').hidden = "hidden";
 		document.getElementById('nextButton').hidden = "";
 	}
 	
@@ -148,35 +204,81 @@ function allQuestions(){
 	else if (question == 9){
 		document.getElementById('ques').innerHTML = "Are you getting adequate sleep? (7-9 hrs)";
 		document.getElementById('a1label').innerHTML = "Yes";
-		document.getElementById('a2label').innerHTML = "No";
-		document.getElementById('a1').hidden = "";
-		document.getElementById('a2').hidden = "";
-		document.getElementById('a1label').hidden = "";
-		document.getElementById('a2label').hidden = "";
-
-		document.getElementById('nextButton').hidden = "hidden";		
-		document.getElementById('submitButton').hidden = "";		
+		document.getElementById('a2label').innerHTML = "No";	
 	}
 	else if (question == 10){ // terminal
 		document.getElementById('ques').innerHTML = "Contact your therapist if you feel consistently depressed, anxious, or inexplicably tired. </br> These feelings can have an impact on your motivation, focus, and health.";
 		document.getElementById('a1label').hidden = "hidden";
 		document.getElementById('a2label').hidden = "hidden";	
 		document.getElementById('a1').hidden = "hidden";
+		document.getElementById('a2').hidden = "hidden";	
+		//document.getElementById('nextButton').hidden = "";		
+		//document.getElementById('submitButton').hidden = "hidden";
+		
+	}
+	else if (question == 11){
+		document.getElementById('ques').innerHTML = "Did you take 15 minutes (e.g. on a Sunday) to plan the week ahead using your calendar?";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";	
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";	
+	}
+	else if (question == 12){
+		document.getElementById('ques').innerHTML = "Did you enter all routine items to your calendar? (e.g. Studying, Labs, tutorials, work, extracurricular activities, bed-time)";
+		
+	}
+	else if (question == 13){
+		document.getElementById('ques').innerHTML = "Did you enter items from your Daily and Master Task-Lists?";
+	}
+	else if (question == 14){
+		// in case of back button
+		document.getElementById('ques').hidden = "";
+		
+		document.getElementById('ques').innerHTML = "Did you enter items that are specific to the coming week? (e.g. assignments, studying, errands, administrative tasks for school)?";		
+		
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
+		
+		document.getElementById('nextButton').hidden = "hidden";
+		document.getElementById('submitButton').hidden = "";
+	}
+	else if (question == 15){ // terminal question
+		document.getElementById('ques').innerHTML = "Now that we have reviewed your Calendar, please refer to your Summary Sheet as we begin to prepare your Task-List and Calendar for next week. ";
+		document.getElementById('a1').hidden = "hidden";
 		document.getElementById('a2').hidden = "hidden";
-		document.getElementById('nextButton').hidden = "";		
+		document.getElementById('a1label').hidden = "hidden";
+		document.getElementById('a2label').hidden = "hidden";
+		document.getElementById('backButton').hidden = "";
+		document.getElementById('nextButton').hidden = "";
 		document.getElementById('submitButton').hidden = "hidden";
+	}
+	else if (question == 16){
+		document.getElementById('ques').innerHTML = "Are you unsure of how much time to assign to each task?";		
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
+		
+		document.getElementById('nextButton').hidden = "hidden";
+		document.getElementById('submitButton').hidden = "";
 		
 	}
 	
+	
+
 }
 
-
 </script>
-<p id="opening">  </p>
-<p id="ques"> Did you have issues with 1 or more of the following?  </p>
+
+<p id="opening">Good job on using the Calendar 
+Please answer the following questions to help us identify issues that prevented you from using the Task-List   </p>
+<p id="ques">  Did you have issues with 1 or more of the following? </p>
 	
-<input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Trouble with motivation</label><br>
-<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label">Trouble remembering to use the system</label><br>
+<input type="radio" id="a1" name="answers" value=0 checked ><label for="a1" id="a1label" >Trouble with motivation</label><br>
+<input type="radio" id="a2" name="answers" value=1 ><label for="a2" id="a2label">Trouble remembering to use the system</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
@@ -188,5 +290,6 @@ function allQuestions(){
 <button id="nextButton" hidden="hidden" onclick="Planning.php"> Next Section
 </button>
 </form>
+
 </body>
 </html>

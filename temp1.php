@@ -3,13 +3,11 @@
 <body>
 
 <h2> Check In </h2>
-<script src="jquery.js">
-</script>
+
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
 var prev;
-
 function goBack(){
 	if (backBtn.length != 1){	
 		prev = backBtn.pop();
@@ -17,8 +15,6 @@ function goBack(){
 	}
 	allQuestions();
 }
-
-
 function nextQuestion(){
 	backBtn.push(question)
 	switch (question) {
@@ -73,8 +69,6 @@ function nextQuestion(){
 	document.getElementById('a1').checked = true;
 	allQuestions();
 } // end function nextQuestion
-
-
 function allQuestions(){
 	if (question == 1){
 		document.getElementById("a1label").innerHTML = "Yes"
@@ -82,7 +76,7 @@ function allQuestions(){
 		document.getElementById("ques").innerHTML = "Did you encounter any technical issues when trying to access the module? ";
 		document.getElementById("backButton").hidden="hidden";
 	}
-	else if (question == 2 || question == 3){
+	if (question == 2 || question == 3){
 		document.getElementById("a1label").innerHTML = "Yes"
 		document.getElementById("a2label").innerHTML = "No"
 		if (question == 2){
@@ -93,7 +87,7 @@ function allQuestions(){
 		
 		}
 	}
-	else if (question == 4 || question == 5){
+	if (question == 4 || question == 5){
 		if (question == 4){
 				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 2 via email?";
 		}
@@ -101,7 +95,7 @@ function allQuestions(){
 				document.getElementById("ques").innerHTML = "Please see Module 2 on how to use pen and paper to organize your schedule </br> Did you receive the Summary Sheet for Module 2 via email?";	
 		}
 	}
-	else if (question == 6 || question == 7){
+	if (question == 6 || question == 7){
 		if (question == 6){
 				document.getElementById("ques").innerHTML = "Please have this accessible for reference during today's session. </br> Did you have any administrative issues such as: </br>Taking your medication regularly?</br>Taking your medication at the scheduled time? ";
 		}
@@ -109,10 +103,10 @@ function allQuestions(){
 				document.getElementById("ques").innerHTML = "Please inform your therapist. </br>Did you have any administrative issues such as: </br>Taking your medication regularly?</br>Taking your medication at the scheduled time?";	
 		}
 	}
-	else if (question == 8){
+	if (question == 8){
 		document.getElementById("ques").innerHTML = "Be sure to adhere to your prescribed medication regimen. You are more likely to achieve success with this program if you commit to the medical and behavioural components.</br>Do you feel that your medication is not working despite following the regimen?";
 	}
-	else if (question == 9 || question == 10){
+	if (question == 9 || question == 10){
 		document.getElementById("ques").innerHTML = "Please inform your therapist";
 		// unhide next section button
 		backBtn.push("CheckIn.php");
@@ -136,8 +130,8 @@ We will also be exploring any issues you may have encountered and how to address
 </button>
  	
 <button type="button" id="submitButton" onclick="nextQuestion()"> Next
-</button>
-	
+</button>	
+
 <button id="nextSecButton" hidden="hidden"> Next Section
 </button>
 </form>

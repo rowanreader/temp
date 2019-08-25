@@ -70,8 +70,8 @@ function allQuestions(){
 	else if (question == 5){
 		document.getElementById('opening').innerHTML = "";
 		document.getElementById('subject').innerHTML = "";
-		document.getElementById('p1').innerHTML = "Be sure to keep track of your time spent on tasks to compare it to your planned time this week.  </br>Create your daily task list at the same time every day and ensure you do your best to cross-off all items before the end of the day. ";
-		document.getElementById('p2').innerHTML = "You are now ready for the week ahead! ";
+		document.getElementById('p1').innerHTML = "Be sure to add items such as decluttering your workspace and designating certain places for important items. This will help you improve future productivity and lower unnecessary stress.";
+		document.getElementById('p2').innerHTML = "Make note of what items or thoughts distracted you and employ the strategies outlined on your Summary Sheet to maintain focus on the task at hand.";
 		document.getElementById('submitButton').hidden = "hidden";
 		
 	}
