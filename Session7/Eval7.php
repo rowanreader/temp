@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<h2> Section A </h2>
+<h2> Evaluation </h2>
 
 
 <script>
 var backBtn = [0]; // keep track of questions
-question = 0;
+question = 1;
 var prev;
 function goBack(){
 	if (backBtn.length != 1){	
@@ -57,6 +57,13 @@ function allQuestions(){
 	else if (question == 2){
 		document.getElementById('ques').innerHTML = "Did you struggle to manage distractions this week?";
 		document.getElementById('backButton').hidden = "";
+		document.getElementById('submitButton').hidden = "";
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
+		document.getElementById('distButton').hidden = "hidden";
+		document.getElementById('assessButton').hidden = "hidden";
 	}
 	else if (question == 3){
 		document.getElementById('ques').innerHTML = "Please move to the next section";
@@ -76,7 +83,7 @@ function allQuestions(){
 <p id="ques"> Did you utilize the distractibility-delay technique this week? </p>
 	
 <input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Yes</label><br>
-<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label"></label>No<br>
+<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label">No</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
@@ -85,7 +92,7 @@ function allQuestions(){
 <button type="button" id="submitButton" onclick="nextQuestion()"> Next
 </button>	
 
-<form method='post' action='Dist.php'>
+<form method='post' action='Distractibility7.php'>
 <button id="distButton" hidden="hidden" onclick="Dist.php"> Next Section
 </button>
 </form>

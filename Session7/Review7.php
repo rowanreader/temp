@@ -7,7 +7,7 @@
 
 <script>
 var backBtn = [0]; // keep track of questions
-question = 0;
+question = 1;
 var prev;
 function goBack(){
 	if (backBtn.length != 1){	
@@ -29,7 +29,7 @@ function nextQuestion(){
 			if (document.getElementById('a1').checked){
 				document.getElementById('evalButton').hidden = "";
 			}
-			else if (document.getElementById('a2').checked{
+			else if (document.getElementById('a2').checked){
 				document.getElementById('calendarButton').hidden = "";
 			}
 			break;
@@ -92,7 +92,7 @@ Highest priority items completed before lower priority items
 Developed break schedule based on typical attention span  </p>
 	
 <input type="radio" id="a1" name="answers" hidden="hidden" value=0 checked><label for="a1" id="a1label" hidden="hidden">Yes</label><br>
-<input type="radio" id="a2" name="answers" hidden="hidden" value=1><label for="a2" id="a2label" hidden="hidden"></label>No<br>
+<input type="radio" id="a2" name="answers" hidden="hidden" value=1><label for="a2" id="a2label" hidden="hidden">No</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back

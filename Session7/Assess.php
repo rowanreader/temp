@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<h2> Section A </h2>
+<h2> Assessment </h2>
 
 
 <script>
 var backBtn = [0]; // keep track of questions
-question = 0;
+question = 1;
 var prev;
 function goBack(){
 	if (backBtn.length != 1){	
@@ -22,11 +22,11 @@ function nextQuestion(){
 	switch(question){
 		case 1:{
 			question = 2;
-			if (document.getElementById('a1').clicked){
+			if (document.getElementById('a1').checked){
 				document.getElementById('selfButton').hidden = "";
 			}
-			else if (document.getElementById('a2').clicked){
-				document.getElementById('sleepButton').hidden = "";
+			else if (document.getElementById('a2').checked){
+				document.getElementById('sleepButton').hidden = "";	
 			}
 			break;
 		}
@@ -47,6 +47,8 @@ function allQuestions(){
 		document.getElementById('a2label').hidden = "";
 		document.getElementById('submitButton').hidden = "";
 		document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('selfButton').hidden = "hidden";
+		document.getElementById('sleepButton').hidden = "hidden";
 	}
 	else if (question == 2){
 		document.getElementById('opening').innerHTML ="";
@@ -55,23 +57,23 @@ function allQuestions(){
 		document.getElementById('a2').hidden = "hidden";
 		document.getElementById('a1label').hidden = "hidden";
 		document.getElementById('a2label').hidden = "hidden";
-		document.getElementById('submitButton').hidden = "";
-		document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('submitButton').hidden = "hidden";
+		document.getElementById('backButton').hidden = "";
 	}
 }
 
 </script>
 
-<p id="opening"> Please assess whether you achieved the following Sleep Habits/Goals last week: 
-7-9h of sleep each night 
-High quality, restful sleep
-No difficulties falling asleep
-No mid-sleep interruptions 
+<p id="opening"> Please assess whether you achieved the following Sleep Habits/Goals last week: </br>
+7-9h of sleep each night </br>
+High quality, restful sleep</br>
+No difficulties falling asleep</br>
+No mid-sleep interruptions </br>
 No caffeine, alcohol, or exercise 3h before bedtime  </p>
 <p id="ques">Did your achieve all of the above? </p>
 	
 <input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label" >Yes</label><br>
-<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label" ></label>No<br>
+<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label" >No</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
@@ -81,12 +83,12 @@ No caffeine, alcohol, or exercise 3h before bedtime  </p>
 </button>	
 
 <form method='post' action='SelfTalk.php'>
-<button id="selfButton" hidden="hidden" onclick="SelfTalk.php"> Next Section
+<button id="selfButton" hidden="hidden"> Next Section
 </button>
 </form>
 
 <form method='post' action='Sleep7.php'>
-<button id="sleepButton" hidden="hidden" onclick="Sleep7.php"> Next Section
+<button id="sleepButton" hidden="hidden"> Next Section
 </button>
 </form>
 

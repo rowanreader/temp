@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<h2> Section A </h2>
+<h2> Self Talk </h2>
 
 
 <script>
 var backBtn = [0]; // keep track of questions
-question = 0;
+question = 1;
 var prev;
 function goBack(){
 	if (backBtn.length != 1){	
@@ -21,6 +21,7 @@ function nextQuestion(){
 	backBtn.push(question);
 	switch(question){
 		case 1:{
+			question = 2;
 			if (document.getElementById('a1').checked){
 				document.getElementById('planButton').hidden = "";
 				document.getElementById('opening').innerHTML = "";
@@ -42,6 +43,14 @@ function allQuestions(){
 	if (question == 1){
 		document.getElementById('opening').innerHTML = " Please assess your Self-Talk last week:</br>Consistently re-evaluated and controlled negative and persistent thoughts (may use a Thought Record)</br>Replacing Thinking Errors holding you back from your full potential</br>Completed your tasks despite negative mood or low motivation (i.e. building perseverance) ";
 		document.getElementById('ques').innerHTML = "Did your achieve all of the above? ";
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
+		document.getElementById('submitButton').hidden = "";
+		document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('planButton').hidden = "hidden";		
+		document.getElementById('roadButton').hidden = "hidden";
 	}
 	else if (question == 2){
 		document.getElementById('ques').innerHTML = "Please move to the next section";
@@ -50,20 +59,21 @@ function allQuestions(){
 		document.getElementById('a1label').hidden = "hidden";
 		document.getElementById('a2label').hidden = "hidden";
 		document.getElementById('submitButton').hidden = "hidden";
+		document.getElementById('backButton').hidden = "";
 	}
 
 }
 
 </script>
 
-<p id="opening"> Please assess your Self-Talk last week: 
-Consistently re-evaluated and controlled negative and persistent thoughts (may use a Thought Record)
-Replacing Thinking Errors holding you back from your full potential 
+<p id="opening"> Please assess your Self-Talk last week: </br>
+Consistently re-evaluated and controlled negative and persistent thoughts (may use a Thought Record)</br>
+Replacing Thinking Errors holding you back from your full potential </br>
 Completed your tasks despite negative mood or low motivation (i.e. building perseverance) </p>
 <p id="ques"> Did your achieve all of the above?</p>
 	
 <input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label" >Yes</label><br>
-<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label" ></label>No<br>
+<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label" >No</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back

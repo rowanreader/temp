@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h2> Check In </h2>
+<h2> Distractibility </h2>
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
@@ -253,7 +253,7 @@ function allQuestions(){
 <button type="button" id="submitButton" onclick="nextQuestion()"> Next
 </button>
 	
-<form method="POST" action="Planning.php">
+<form method="POST" action="Planning4.php">
 <button id="nextButton" hidden="hidden"> Next Section
 </button>
 </form>

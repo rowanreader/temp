@@ -7,7 +7,7 @@
 
 <script>
 var backBtn = [0]; // keep track of questions
-question = 0;
+question = 1;
 var prev;
 function goBack(){
 	if (backBtn.length != 1){	
@@ -87,13 +87,21 @@ function allQuestions(){
 	}
 	else if (question == 5){
 		document.getElementById('ques').innerHTML = "Do you consume alcohol, caffeine, or exercise 3h before bed?";
-		docuement.getElementById('submitButton').hidden = "";
-		docuement.getElementById('nextButton').hidden = "hidden";
+		document.getElementById('submitButton').hidden = "";
+		document.getElementById('nextButton').hidden = "hidden";
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
 	}
 	else if (question == 6){
-		docuement.getElementById('ques').innerHTML = "If you have fatigue that doesn't improve with the strategies outlined in Module 4, please contact your therapist</br>Certain medications can causer fatigue. Please contact your physician, therapist, or the health and wellness centre if you experience one or more of the following:</br>Depression</br>Anxiety</br>Known issues with iron, thyroid, or other conditions ";
-		docuement.getElementById('submitButton').hidden = "hidden";
-		docuement.getElementById('nextButton').hidden = "";
+		document.getElementById('ques').innerHTML = "If you have fatigue that doesn't improve with the strategies outlined in Module 4, please contact your therapist</br>Certain medications can causer fatigue. Please contact your physician, therapist, or the health and wellness centre if you experience one or more of the following:</br>Depression</br>Anxiety</br>Known issues with iron, thyroid, or other conditions ";
+		document.getElementById('submitButton').hidden = "hidden";
+		document.getElementById('nextButton').hidden = "";
+		document.getElementById('a1').hidden = "hidden";
+		document.getElementById('a2').hidden = "hidden";
+		document.getElementById('a1label').hidden = "hidden";
+		document.getElementById('a2label').hidden = "hidden";
 	}
 }
 
@@ -102,8 +110,8 @@ function allQuestions(){
 <p id="opening">  </p>
 <p id="ques"> Do you have trouble falling asleep?  </p>
 	
-<input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label" hidden="hidden">Yes</label><br>
-<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label" hidden="hidden"></label>No<br>
+<input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Yes</label><br>
+<input type="radio" id="a2" name="answers" value=1><label for="a2" id="a2label">No</label><br>
 
 </br>
 <button type="button" id="backButton" onclick="goBack()" hidden="hidden"> Back
@@ -113,7 +121,7 @@ function allQuestions(){
 </button>	
 
 <form method='post' action='SelfTalk.php'>
-<button id="nextButton" hidden="hidden" onclick="SelfTalk.php"> Next Section
+<button id="nextButton" hidden="hidden"> Next Section
 </button>
 </form>
 

@@ -122,12 +122,12 @@ function allQuestions(){
 		document.getElementById("a1label").hidden="";
 		document.getElementById("a2label").hidden="";
 		
-		document.getElementById("nextSecButton").hidden="hidden";
+		document.getElementById("nextButton").hidden="hidden";
 		document.getElementById("submitButton").hidden="";
 	}
 	else if (question == 10){
 		// unhide next section button
-		document.getElementById("nextSecButton").hidden="";
+		document.getElementById("nextButton").hidden="";
 		document.getElementById("submitButton").hidden="hidden";
 		
 		document.getElementById("a1").hidden="hidden";
@@ -139,7 +139,7 @@ function allQuestions(){
 }
 </script>
 
-<form method="POST" action="Review.php">
+<form method="POST" action="Review7.php">
 <p id="opening">Welcome to today's session!  
 You have now completed all of the modules on behavioural change! 
 Over the next couple weeks we will be focussing on piecing these habits together and identify areas for improvement to maintain and further the success you have achieved so far. 

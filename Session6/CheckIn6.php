@@ -122,12 +122,12 @@ function allQuestions(){
 		document.getElementById("a1label").hidden="";
 		document.getElementById("a2label").hidden="";
 		
-		document.getElementById("nextSecButton").hidden="hidden";
+		document.getElementById("nextButton").hidden="hidden";
 		document.getElementById("submitButton").hidden="";
 	}
 	else if (question == 10){
 		// unhide next section button
-		document.getElementById("nextSecButton").hidden="";
+		document.getElementById("nextButton").hidden="";
 		document.getElementById("submitButton").hidden="hidden";
 		
 		document.getElementById("a1").hidden="hidden";
@@ -139,7 +139,7 @@ function allQuestions(){
 }
 </script>
 
-<form method="POST" action="Delay.php">
+<form method="POST" action="Roadblocks.php">
 <p id="opening"> Welcome to today's session! We will be reviewing how to improve the quality and quantity of your sleep. We will also be exploring any issues you may of encountered and how to address them moving forward with the program.  </p>
 <p id="ques"> Did you encounter any technical issues when trying to access the module? </p>
 	
@@ -154,7 +154,7 @@ function allQuestions(){
 <button type="button" id="submitButton" onclick="nextQuestion()"> Next
 </button>
 	
-<button id="nextSecButton" hidden="hidden"> Next Section
+<button id="nextButton" hidden="hidden"> Next Section
 </button>
 </form>
 

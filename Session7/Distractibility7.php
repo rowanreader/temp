@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h2> Check In </h2>
+<h2> Distractibility </h2>
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
