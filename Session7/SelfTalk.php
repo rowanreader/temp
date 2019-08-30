@@ -3,6 +3,9 @@
 <body>
 
 <h2> Self Talk </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>

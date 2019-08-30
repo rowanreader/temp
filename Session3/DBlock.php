@@ -4,6 +4,9 @@
 
 <h2> D Block </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>
@@ -53,9 +56,11 @@ function nextQuestion(){
 		case 4:{
 			if (document.getElementById('a1').checked){
 				question = 6;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				question = 7;
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}	

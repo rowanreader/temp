@@ -3,6 +3,9 @@
 <body>
 
 <h2> Sleep Hygiene </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>
@@ -34,12 +37,18 @@ function nextQuestion(){
 			if (document.getElementById('a1').checked){
 				document.getElementById('opening').innerHTML = "Try writing your thoughts on a notepad. You can return to them in the morning. ";
 			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
+			}
 			break;
 		}
 		case 3:{
 			question = 4;
 			if (document.getElementById('a1').checked){
 				document.getElementById('opening').innerHTML = "Try putting your phone/laptop/tablet away 30 minutes before bed</br>If possible, sleep with your phone away from you, or in another room</br>These practices will improve your ability to fall asleep and your overall sleep quality. ";
+			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}

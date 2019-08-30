@@ -3,6 +3,9 @@
 <body>
 
 <h2> Sleep </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>
@@ -26,6 +29,7 @@ function nextQuestion(){
 				document.getElementById('opening').innerHTML = "Good job! This is an important aspect of performance in school and daily tasks.";
 			}
 			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 				question = 3;
 			}
 			break;
@@ -36,6 +40,9 @@ function nextQuestion(){
 				document.getElementById('opening').innerHTML = "Keep a sleep journal to determine which duration, bedtime, and wake-up time is best for you.";
 				
 			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
+			}
 			break;
 		}
 		case 3:{
@@ -44,6 +51,7 @@ function nextQuestion(){
 				question = 4;
 			}
 			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 				question = 5;
 			}
 			break;
@@ -55,6 +63,7 @@ function nextQuestion(){
 				question = 4;
 			}
 			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 				question = 6;
 			}
 			break;

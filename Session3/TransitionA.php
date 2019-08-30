@@ -4,6 +4,9 @@
 
 <h2> Section A </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 <script>
 var backBtn = [0]; // keep track of questions
@@ -68,6 +71,7 @@ function nextQuestion(){
 		case 5:{
 			if (document.getElementById('a1').checked){
 				question = 7;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2"
@@ -77,16 +81,19 @@ function nextQuestion(){
 		}
 		case 6:{ 
 			question = 10; // goes to next section
+			document.getElementById('opening').innerHTML = "";
 			break;
 		}
 		
 		case 7:{
 			question = 8;
+			document.getElementById('opening').innerHTML = "";
 			break;
 		}
 		case 8:{
 			if (document.getElementById('a1').checked){
 				question = 9;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2";
@@ -223,10 +230,16 @@ function allQuestions(){
 		document.getElementById('ques').innerHTML = "Was your study time interrupted with distractions?"
 		document.getElementById('a1').hidden = "";
 		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
 	}
 	else if (question == 10){
-	document.getElementById('ques').innerHTML = "Did you take 15 minutes (e.g. on a Sunday) to plan the week ahead using your calendar?";
-	//document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('ques').innerHTML = "Did you take 15 minutes (e.g. on a Sunday) to plan the week ahead using your calendar?";
+		//document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('a1').hidden = "";
+		document.getElementById('a2').hidden = "";
+		document.getElementById('a1label').hidden = "";
+		document.getElementById('a2label').hidden = "";
 	}
 	else if (question == 11){
 		document.getElementById('ques').innerHTML = "Did you enter all routine items to your calendar? (e.g. Studying, Labs, tutorials, work, extracurricular activities, bed-time)";

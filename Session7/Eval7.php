@@ -3,6 +3,9 @@
 <body>
 
 <h2> Evaluation </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>
@@ -35,9 +38,11 @@ function nextQuestion(){
 			question = 3;
 			if (document.getElementById('a1').checked){
 				document.getElementById('distButton').hidden = "";
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('assessButton').hidden = "";
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}

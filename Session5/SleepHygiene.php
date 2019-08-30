@@ -4,6 +4,9 @@
 
 <h2> Sleep Hygiene </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 <script>
 var backBtn = [0]; // keep track of questions
@@ -74,6 +77,7 @@ function allQuestions(){
 	if (question == 1){
 		document.getElementById('ques').innerHTML = "Do you have trouble falling asleep?";
 		document.getElementById('backButton').hidden = "hidden";
+		document.getElementById('opening').innerHTML = "";
 	}
 	else if (question == 2){		
 		document.getElementById('ques').innerHTML = "Do nagging thoughts keep you awake?";

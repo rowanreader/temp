@@ -3,8 +3,9 @@
 <body>
 
 <h2> Planning </h2>
-
-
+<p><font color='gray'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='red'> Planning </font></p>
 
 <script>
 var backBtn = [0,1]; 
@@ -26,6 +27,7 @@ function nextQuestion(){
 			break;
 		}
 		case 2:{
+			document.getElementById('opening').innerHTML = "";
 			question = 3;
 			break;
 		}

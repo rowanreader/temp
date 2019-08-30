@@ -4,6 +4,9 @@
 
 <h2> Sleep </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 <script>
 var backBtn = [0]; // keep track of questions

@@ -3,6 +3,10 @@
 <body>
 
 <h2> Check In </h2>
+<p><font color='red'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
+
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
@@ -31,12 +35,21 @@ function nextQuestion(){
 		document.getElementById("backButton").hidden="";
 		break;
 	}
-	case 2:
+	case 2:{
+		if (document.getElementById('a1').checked){
+			question = 4;
+		}
+		else if (document.getElementById('a2').checked){
+			question = 5;
+		}
+		break;
+	}
 	case 3:{
 		if (document.getElementById('a1').checked){
 			question = 4;
 		}
 		else if (document.getElementById('a2').checked){
+			document.getElementById('opening').innerHTML = "Try reviewing the ideas on the Module 3 summary sheet and see how to make your stuyd area more work-friendly.";
 			question = 5;
 		}
 		break;
@@ -89,13 +102,13 @@ function allQuestions(){
 			document.getElementById("ques").innerHTML = "Please contact your therapist. </br>Are you comfortable with the digital tools recommended in Module 2 (i.e. Distractibility Delay)?";
 		}
 		else{
-			document.getElementById("ques").innerHTML = "Are you comfortable with the digital tools recommended in Module 3 (i.e. Distractibility Delay)?";
+			document.getElementById("ques").innerHTML = "Were you able to minimize distractions in your study area this past week (Module 3: Distractibility Delay)?";
 		
 		}
 	}
 	else if (question == 4 || question == 5){
 		if (question == 4){
-				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 3 via email?";
+				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 4 via email?";
 		}
 		else if (question == 5){
 				document.getElementById("ques").innerHTML = "Please see Module 3 on how to minimize distractions and maintain focus. </br> Did you receive the Summary Sheet for Module 3 via email?";	

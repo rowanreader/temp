@@ -3,6 +3,10 @@
 <body>
 
 <h2> Check In </h2>
+<p><font color='red'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
+
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
@@ -95,7 +99,7 @@ function allQuestions(){
 	}
 	else if (question == 4 || question == 5){
 		if (question == 4){
-				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 3 via email?";
+				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 5 via email?";
 		}
 		else if (question == 5){
 				document.getElementById("ques").innerHTML = "Please see Module 4 on how to minimize distractions and maintain focus. </br> Did you receive the Summary Sheet for Module 4 via email?";	
@@ -140,7 +144,7 @@ function allQuestions(){
 </script>
 
 <form method="POST" action="Sleep.php">
-<p id="opening"> Welcome to today's session! We will be reviewing how to improve the quality and quantity of your sleep. We will also be exploring any issues you may of encountered and how to address them moving forward with the program.  </p>
+<p id="opening"> Welcome to today's session! We will be reviewing how to improve the quality and quantity of your sleep. We will also be exploring any issues you may have encountered and how to address them moving forward with the program.  </p>
 <p id="ques"> Did you encounter any technical issues when trying to access the module? </p>
 	
 	<input type="radio" id="a1" name="answers" value=0 checked><label for="a1" id="a1label">Yes</label><br>

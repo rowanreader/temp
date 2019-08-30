@@ -3,6 +3,8 @@
 <body>
 
 <h2> Delay </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
 
 
 <script>

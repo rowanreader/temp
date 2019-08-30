@@ -4,6 +4,9 @@
 
 <h2> Section C </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 <script>
 var backBtn = [0]; // keep track of questions
@@ -25,6 +28,7 @@ function nextQuestion(){
 			break;
 		}
 		case 1:{
+			document.getElementById('opening').innerHTML = "";
 			if (document.getElementById('a1').checked){
 				question = 2;
 			}
@@ -54,6 +58,7 @@ function nextQuestion(){
 			break;
 		}
 		case 4:{
+			document.getElementById('opening').innerHTML = "";
 			if (document.getElementById('a1').checked){
 				question = 6;
 			}
@@ -67,12 +72,18 @@ function nextQuestion(){
 			if (document.getElementById('a1').checked){				
 				document.getElementById('opening').innerHTML = "Try writing these thoughts down and returning to them after you have completed the task. </br>You will learn more about how to manage distractions in Module 3, next week";
 			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
+			}
 			break;
 		}
 		case 7:{
 			question = 8;
 			if (document.getElementById('a1').checked){				
 				document.getElementById('opening').innerHTML = "Do not worry. It is normal to be uncomfortable navigating new systems at first, and even harder to build a sustainable habit -- often 10-12 weeks. Keep sticking to the plan and use the system next week. If you need to make slight modifications, such as using paper and pen for comfort-level, please refer back to Module 2 where this is discussed.";
+			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}
@@ -81,16 +92,24 @@ function nextQuestion(){
 			if (document.getElementById('a1').checked){
 				document.getElementById('opening').innerHTML = "Implementing significant behaviour change is very challenging at the beginning. </br>It takes weeks before things start to become easier, however, it does work if you stick with it!</br>This program will help you fulfill your true potential by assisting you in organizational and time-management skills.</br>Keep trying and it will become easier when you begin to see positive results in the later sessions "
 			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
+			}
 			break;
 		}
 		case 9:{
 			question = 10;
 			if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Consider arranging your schedule in your calendar next week to aim for 7-9 hrs of sleep.</br>We will discuss sleep issues and how to address them in Module 4 in two weeks. ";
-			}		
+			}	
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
+			}
+			
 			break;
 		}
 		case 10:{
+			document.getElementById('opening').innerHTML = "";
 			question = 11;
 			break;
 		}
@@ -138,6 +157,7 @@ function nextQuestion(){
 		case 15:{
 			if (document.getElementById('a1').checked){
 				question = 17;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2"
@@ -146,17 +166,20 @@ function nextQuestion(){
 			break;
 		}
 		case 16:{ 
+			document.getElementById('opening').innerHTML = "";
 			question = 20;
 			break;
 		}
 		
 		case 17:{
+			document.getElementById('opening').innerHTML = "";
 			question = 18;
 			break;
 		}
 		case 18:{
 			if (document.getElementById('a1').checked){
 				question = 19;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2";

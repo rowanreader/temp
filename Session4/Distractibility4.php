@@ -3,6 +3,10 @@
 <body>
 
 <h2> Distractibility </h2>
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
+
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;
@@ -32,6 +36,7 @@ function nextQuestion(){
 		}
 		
 		case 2:{
+			document.getElementById('opening').innerHTML = "";
 			if (document.getElementById('a1').checked){
 				question = 3;
 			}
@@ -53,6 +58,8 @@ function nextQuestion(){
 		}
 		
 		case 4:{
+			
+			document.getElementById('opening').innerHTML = "";
 			question = 5;
 			if (document.getElementById('c1').checked || document.getElementById('c2').checked || document.getElementById('c3').checked){
 				document.getElementById('c1text').innerHTML = "Turn phone on Do Not Disturb & place out of the room. You can check it during a break or after the task is complete.</br>Delete distracting apps during day. Re-download after tasks have been completed</br>Consider blocking all contacts except for those whom you MUST have urgent contact with</br>";   
@@ -70,6 +77,7 @@ function nextQuestion(){
 		}
 		
 		case 5:{
+			document.getElementById('opening').innerHTML = "";
 			question = 6;
 			break;
 		}
@@ -99,6 +107,7 @@ function nextQuestion(){
 		}
 		
 		case 8:{
+			document.getElementById('opening').innerHTML = "";
 			question = 9;
 			break;
 		}		
@@ -107,6 +116,9 @@ function nextQuestion(){
 			question = 10;
 			if (document.getElementById('a1').checked){
 				document.getElementById('opening').innerHTML = "Avoid scrolling through social media on breaks , it is easy to lose track of time</br>Avoid starting new tasks during a break</br>Aim to incorporate some physical movement into your break time</br>Set an alarm for 5-15 minutes depending on how long your break is  ";
+			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}

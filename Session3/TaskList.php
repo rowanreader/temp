@@ -4,6 +4,9 @@
 
 <h2> Task List </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 
 <script>
@@ -66,6 +69,7 @@ function nextQuestion(){
 		case 5:{
 			if (document.getElementById('a1').checked){
 				question = 7;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2"
@@ -74,16 +78,19 @@ function nextQuestion(){
 			break;
 		}
 		case 6:{ 
+			document.getElementById('opening').innerHTML = "";
 			break;
 		}
 		
 		case 7:{
+			document.getElementById('opening').innerHTML = "";
 			question = 8;
 			break;
 		}
 		case 8:{
 			if (document.getElementById('a1').checked){
 				question = 9;
+				document.getElementById('opening').innerHTML = "";
 			}
 			else if (document.getElementById('a2').checked){
 				document.getElementById('opening').innerHTML = "Try to do this next week. Please refer to your Summary Sheet for Module 2";

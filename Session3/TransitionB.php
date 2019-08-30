@@ -4,6 +4,9 @@
 
 <h2> Section B </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='red'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
 
 <script>
 var backBtn = [0]; // keep track of questions
@@ -21,6 +24,7 @@ function nextQuestion(){
 	backBtn.push(question);
 	switch(question){
 		case 1:{
+			document.getElementById('opening').innerHTML = "";
 			if (document.getElementById('a1').checked){
 				question = 2;
 			}
@@ -50,6 +54,7 @@ function nextQuestion(){
 			break;
 		}
 		case 4:{
+			document.getElementById('opening').innerHTML = "";
 			if (document.getElementById('a1').checked){
 				question = 6;
 			}
@@ -62,6 +67,9 @@ function nextQuestion(){
 			question = 7;
 			if (document.getElementById('a1').checked){				
 				document.getElementById('opening').innerHTML = "Try writing these thoughts down and returning to them after you have completed the task. </br>You will learn more about how to manage distractions in Module 3, next week";
+			}
+			else if (document.getElementById('a2').checked){
+				document.getElementById('opening').innerHTML = "";
 			}
 			break;
 		}

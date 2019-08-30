@@ -3,6 +3,10 @@
 <body>
 
 <h2> Check In </h2>
+<p><font color='red'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
+
 <script>
 var backBtn = [0,1]; // keep track of questions
 question = 1;

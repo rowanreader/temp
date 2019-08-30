@@ -3,6 +3,10 @@
 <body>
 
 <h2> Check In </h2>
+<p><font color='red'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='gray'> Planning </font></p>
+
 <script src="jquery.js">
 </script>
 <script>
@@ -95,7 +99,7 @@ function allQuestions(){
 	}
 	else if (question == 4 || question == 5){
 		if (question == 4){
-				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 2 via email?";
+				document.getElementById("ques").innerHTML = "Did you receive the Summary Sheet for Module 3 via email?";
 		}
 		else if (question == 5){
 				document.getElementById("ques").innerHTML = "Please see Module 2 on how to use pen and paper to organize your schedule </br> Did you receive the Summary Sheet for Module 2 via email?";	

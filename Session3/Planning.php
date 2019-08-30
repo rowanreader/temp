@@ -4,6 +4,9 @@
 
 <h2> Planning </h2>
 
+<p><font color='gray'> Check In </font></p>
+<p><font color='gray'> Main Section </font></p>
+<p><font color='red'> Planning </font></p>
 
 
 <script>
@@ -52,6 +55,7 @@ function allQuestions(){
 	}
 	else if (question == 2){
 		document.getElementById('backButton').hidden = "";
+		document.getElementById('opening').innerHTML = "";
 		document.getElementById('subject').innerHTML = "Calendar";
 		document.getElementById('p1').innerHTML = "Determine which tasks are considered Level-A (Highest) priority </br>These include, but are not limited to: </br>Assignments due this week </br>Studying for tests this week </br>Administrative deadlines (e.g. paying bills, tuition, rent etc.) ";
 		document.getElementById('p2').innerHTML = "Determine the amount of time you need to spend on these tasks and enter them to your calendar </br>For help determining the time needed for an assignment or studying, refer to the UofT assignment calculator which will help you create a step-by-step plan to tackle your school work. ";
